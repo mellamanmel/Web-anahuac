@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family:  'Roboto Slab', serif ;
+    background-color: lightpink;
+}
+.container {
+    width: 80vw;
+    margin: 0 auto;
+    background-color: lightcoral;
+}
+h1 {
+    font-size: 3rem;
+   font-weight: 700;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+h1, h2, p, img {
+    padding: .4rem;
+}
+#perris {
+    width: 200px;
+    float: left;
+    shape-outside: circle(94px at center center);
+}
+
+#perris2{
+    width: 300px;
+    float: left;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    shape-outside:polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+}
+#croquetas{
+    float: left;
+    shape-outside: url();
+}
+main{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "u u u d d d"
+    "u u u d d d"
+    "t t t d d d"
+    "t t t . . ."
+    ;
+}
+#uno {
+    grid-area: u;
+}
+#dos {
+    grid-area: d;
+}
+#tres {
+    grid-area: t;
+}
